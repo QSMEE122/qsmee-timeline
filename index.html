@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>QSMEE History Timeline</title>
+
+  <link rel="stylesheet" href="https://cdn.knightlab.com/libs/timeline3/latest/css/timeline.css">
+
+  <style>
+    :root {
+      --qsmee-navy: #0d2746;
+      --qsmee-blue: #1d5f9e;
+      --qsmee-green: #2f6f3e;
+      --qsmee-gold: #d8aa33;
+      --qsmee-cream: #f7f4ec;
+      --qsmee-text: #1d2733;
+      --qsmee-muted: #4c5a68;
+      --qsmee-white: #ffffff;
+      --qsmee-border: #d7dee5;
+    }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--qsmee-cream);
+      color: var(--qsmee-text);
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .qsmee-shell {
+      width: 100%;
+      min-height: 650px;
+      background: var(--qsmee-cream);
+      border: 1px solid var(--qsmee-border);
+      box-sizing: border-box;
+    }
+
+    #timeline-embed {
+      width: 100%;
+      height: 650px;
+      background: var(--qsmee-cream);
+    }
+
+    /* Main slide background */
+    .tl-timeline,
+    .tl-slider-container-mask,
+    .tl-slide,
+    .tl-slide-content-container {
+      background: var(--qsmee-cream) !important;
+    }
+
+    /* Headings */
+    .tl-headline,
+    .tl-headline-date,
+    .tl-headline-date small,
+    .tl-text h1,
+    .tl-text h2,
+    .tl-text h3 {
+      color: var(--qsmee-navy) !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-weight: 700 !important;
+      line-height: 1.15 !important;
+    }
+
+    .tl-headline {
+      font-size: clamp(28px, 3vw, 46px) !important;
+    }
+
+    /* Body copy */
+    .tl-text,
+    .tl-text p,
+    .tl-text-content,
+    .tl-caption,
+    .tl-credit,
+    .tl-text a {
+      color: var(--qsmee-text) !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-size: 18px !important;
+      line-height: 1.55 !important;
+    }
+
+    .tl-text a {
+      color: var(--qsmee-blue) !important;
+      font-weight: 700 !important;
+      text-decoration: underline !important;
+    }
+
+    .tl-caption,
+    .tl-credit {
+      color: var(--qsmee-muted) !important;
+      font-size: 14px !important;
+    }
+
+    /* Timeline navigation */
+    .tl-timenav {
+      background: #eef2f4 !important;
+      border-top: 3px solid var(--qsmee-navy) !important;
+    }
+
+    .tl-timemarker .tl-timemarker-content-container {
+      background: var(--qsmee-white) !important;
+      border-color: #cbd4dd !important;
+    }
+
+    .tl-timemarker:hover .tl-timemarker-content-container,
+    .tl-timemarker.tl-timemarker-active .tl-timemarker-content-container {
+      background: #fff9df !important;
+      border-color: var(--qsmee-gold) !important;
+    }
+
+    .tl-timemarker .tl-timemarker-text h2.tl-headline {
+      color: var(--qsmee-navy) !important;
+      font-size: 13px !important;
+      line-height: 1.2 !important;
+    }
+
+    .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-major .tl-timeaxis-tick-text,
+    .tl-timeaxis .tl-timeaxis-content-container .tl-timeaxis-minor .tl-timeaxis-tick-text {
+      color: var(--qsmee-text) !important;
+      font-family: Arial, Helvetica, sans-serif !important;
+      font-weight: 600 !important;
+    }
+
+    /* Controls */
+    .tl-menubar-button {
+      background: var(--qsmee-navy) !important;
+      color: white !important;
+      border-color: white !important;
+    }
+
+    .tl-slidenav-next .tl-slidenav-title,
+    .tl-slidenav-previous .tl-slidenav-title,
+    .tl-slidenav-next .tl-slidenav-description,
+    .tl-slidenav-previous .tl-slidenav-description {
+      color: var(--qsmee-navy) !important;
+    }
+
+    /* Improve contrast for media area */
+    .tl-media .tl-media-content-container {
+      color: var(--qsmee-text) !important;
+    }
+
+    /* Mobile */
+    @media (max-width: 700px) {
+      #timeline-embed {
+        height: 720px;
+      }
+
+      .tl-text,
+      .tl-text p,
+      .tl-text-content {
+        font-size: 16px !important;
+        line-height: 1.5 !important;
+      }
+
+      .tl-headline {
+        font-size: 30px !important;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main class="qsmee-shell" aria-label="QSMEE history timeline">
+    <div id="timeline-embed"></div>
+  </main>
+
+  <script src="https://cdn.knightlab.com/libs/timeline3/latest/js/timeline.js"></script>
+  <script>
+    const options = {
+      hash_bookmark: true,
+      initial_zoom: 2,
+      language: "en",
+      timenav_position: "bottom",
+      start_at_end: false,
+      debug: false
+    };
+
+    window.timeline = new TL.Timeline(
+      "timeline-embed",
+      "v2:2PACX-1vQom-dWp19V4O-zdWUNCQg6ae6C6hyXyDGfv4Mk2Q8uRijnk0kKal9ELQwdR42UUg",
+      options
+    );
+  </script>
+</body>
+</html>
